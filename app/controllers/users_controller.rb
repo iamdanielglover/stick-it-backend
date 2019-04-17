@@ -19,9 +19,9 @@ class UsersController < ApplicationController
     if @user.save
       defaults= [
         {name: "Health", color: "pink", user: @user},
-        {name: "Business", color: "blue", user: @user},
-        {name: "Social", color: "yellow", user: @user},
-        {name: "Appointments", color: "green", user: @user}
+        {name: "Business", color: "#e0a1ef", user: @user},
+        {name: "Social", color: "#d88bc6", user: @user},
+        {name: "Appointments", color: "#ce32f1", user: @user}
       ]
       defaults.each {|obj| Category.create(obj)}
       render json: @user
